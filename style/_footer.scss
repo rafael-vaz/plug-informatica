@@ -1,0 +1,59 @@
+@import "function", "fonts", "variebles";
+
+//FOOTER
+footer {
+  height: auto;
+  padding: 10% 10%;
+  overflow-x: hidden;
+  @include flexBox(row, space-evenly, center);
+  flex-wrap: wrap;
+
+  .info-text {
+    width: 40%;
+
+    div {
+      line-height: 25px;
+      margin-bottom: 20px;
+      h3 {
+        font-family: $poppins;
+        color: $black;
+        font-size: 0.9rem;
+        font-weight: 500;
+        @include flexBox(row, flex-start, center);
+        img {
+          width: 30px;
+          margin-right: 8px;
+        }
+      }
+      p {
+        font-family: $poppins;
+        color: $lightBlack;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .social-network {
+    @include flexBox(column, space-around, center);
+    width: 40%;
+    img {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    h3 {
+      line-height: 25px;
+      font-family: $poppins;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: $black;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .social-icons {
+      img {
+        width: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafael Vaz">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="icon" href="./image/logo/logo.svg">
+    <script src="./node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>ScrollReveal({ reset: true });</script>
+    <title>Plug Informática - Contato</title>
+</head>
+
+<body>
+    <!--BARRA DE NAVEGAÇÃO-->
+    <nav class="navbar">
+        <a href="./index.html" id="logo"><img src="./image/logo/logo.svg" alt="Logo"></a>
+        <div class="nav-links">
+            <a class="hidden" href="./index.html"><img src="image/navbar-icons/home.svg">home</a>
+            <a class="hidden" href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a>
+            <a class="hidden" href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a>
+            <a class="hidden" href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a>
+            <div class="menu-hamburger">
+                <button class="btn-menu"><img src="./image/navbar-icons/menu.svg" alt="Menu"></button>
+                <ul class="menu-list">
+                    <li><a href="./index.html"><img src="image/navbar-icons/home.svg">home</a></li>
+                    <li><a href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a></li>
+                    <li><a href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a></li>
+                    <li><a href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--FORMULÁRIO DE CONTATO-->
+
+    <div class="contact-container">
+        <div class="form-contact">
+            <div class="form-title">
+                <img src="./image/form-icons/question.svg" alt="Interrogação">
+                <h3>envie sua dúvida</h3>
+            </div>
+            <form action="#" method="#">
+
+                <div class="form-inputs">
+                    <label class="label-style" for="nome">Nome</label>
+                    <input class="input-style" name="nome" type="text" placeholder="Seu nome">
+
+                    <label class="label-style" for="email">Email</label>
+                    <input class="input-style" name="email" type="text" placeholder="Seu email">
+
+                    <label class="label-style" for="assunto">Assunto</label>
+                    <input class="input-style" name="assunto" type="text" placeholder="Tipo de assunto">
+
+                    <label class="label-style" for="mensagem">Mensagem</label>
+                    <textarea class="input-style" name="mensagem" placeholder="Digite sua dúvida aqui"></textarea>
+                </div>
+                <div class="contact-btn">
+                    <input class="form-btn" type="submit" value="enviar">
+                </div>
+            </form>
+        </div>
+
+        <div class="contact-details">
+            <h3><img src="./image/contact-icons/contact.svg" alt="Contato">DETALHES DO CONTATO</h3>
+            <ul>
+                <li><img src="./image/contact-icons/house.svg" alt="Casa">Recife/PE - Av. João de Barros, 1281</li>
+                <li><img src="./image/contact-icons/phone.svg" alt="Telefone">(81) 3244.3723 / 98709.4615</li>
+                <li><img src="./image/contact-icons/email.svg" alt="Email">contato@pluginformatica.com.br</li>
+                <li><img src="./image/contact-icons/network.svg" alt="Network">www.pluginformatica.com.br</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="info-text">
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/building.svg" alt="Construção">SOBRE NÓS</h3>
+                <p>Há mais de 10 anos atuando nos mais diversos segmentos e em clientes de todos
+                    os portes, a PLUG INFORMÁTICA criou uma oferta de serviços ampla e capaz de se
+                    adaptar as necessidade especificas de cada cliente ou segmento.</p>
+            </div>
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/location.svg" alt="Localização">LOCAL</h3>
+                <p>Recife/PE - Av. João de Barros, 1281 loja 02 - Empresarial Arcon CEP: 52021-180</p>
+            </div>
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/mail.svg" alt="Carta">EMAIL</h3>
+                <p>contato@pluginformatica.com.br</p>
+            </div>
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/phone.svg" alt="Telefone">TELEFONE</h3>
+                <p>(81) 3244.3723 / 98709.4615</p>
+            </div>
+        </div>
+
+        <div class="social-network">
+            <img src="./image/drawings/draw05.svg" alt="Mulher ao celular">
+            <h3>INSCREVA-SE EM NOSSAS REDES SOCIAIS</h3>
+            <div class="social-icons">
+                <img src="./image/footer-icons/facebook.svg" alt="Facebook">
+                <img src="./image/footer-icons/instagram.svg" alt="Instagram">
+                <img src="./image/footer-icons/twitter.svg" alt="Twitter">
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

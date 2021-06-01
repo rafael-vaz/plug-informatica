@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rafael Vaz">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="icon" href="./image/logo/logo.svg">
+    <script src="./node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>ScrollReveal({ reset: true });</script>
+    <title>Plug Informática - Home</title>
+</head>
+
+<body>
+    <!--BARRA DE NAVEGAÇÃO-->
+    <nav class="navbar">
+        <a href="./index.html" id="logo"><img src="./image/logo/logo.svg" alt="Logo"></a>
+        <div class="nav-links">
+            <a class="hidden" href="./index.html"><img src="image/navbar-icons/home.svg">home</a>
+            <a class="hidden" href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a>
+            <a class="hidden" href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a>
+            <a class="hidden" href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a>
+            <div class="menu-hamburger">
+                <button class="btn-menu"><img src="./image/navbar-icons/menu.svg" alt="Menu"></button>
+                <ul class="menu-list">
+                    <li><a href="./index.html"><img src="image/navbar-icons/home.svg">home</a></li>
+                    <li><a href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a></li>
+                    <li><a href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a></li>
+                    <li><a href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--BANNER-->
+    <section class="banner">
+        <div class="banner-text">
+            <p class="text-animation">As melhores</p>
+            <h3 class="text-animation">Soluções em TI</h3>
+        </div>
+        <img id="draw-banner" class="draw" src="./image/drawings/draw04.svg" alt="Homem com notebook">
+    </section>
+    <!--SERVIÇOS-->
+    <main class="services">
+        <h3> <img src="./image/service-main-icons/vector.svg" alt="Serviços"> nossos serviços</h3>
+
+        <div class="services-list">
+
+            <div class="card">
+                <div id="card-manutencao" class="card-content"></div>
+                <p>Manutenção de computadores</p>
+            </div>
+
+            <div class="card">
+                <div id="card-infraestrutura" class="card-content"></div>
+                <p>Infraestrutura de redes</p>
+            </div>
+
+            <div class="card">
+                <div id="card-seguranca" class="card-content"></div>
+                <p>Segurança da informação</p>
+            </div>
+
+            <div class="card">
+                <div id="card-suporte" class="card-content"></div>
+                <p>Suporte remoto</p>
+            </div>
+
+        </div>
+    </main>
+    <!--JANELA MODAL-->
+    <div id="modal-manutencao" class="modal-bg">
+        <div class="modal">
+            <button class="modal-btn"><img src="./image/modal-media/close.svg" alt="Fechar"></button>
+            <div>
+                <h3><img src="./image/modal-media/tools.svg" alt="Ferramentas">Manutenção de computadores</h3>
+                <p>Oferecemos um serviço de manutenção preventiva e corretiva que visa solucionar problemas nos demais
+                    dispositivos presentes em seu ambiente de trabalho ou doméstico. Por meio da aplicação de testes,
+                    monitoramento
+                    e técnicas de suporte, garantimos a integridade de seu sistema e hardware de forma rápida e eficaz.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-rede" class="modal-bg">
+        <div class="modal">
+            <button class="modal-btn"><img src="./image/modal-media/close.svg" alt="Fechar"></button>
+            <div>
+                <h3><img src="./image/modal-media/network.svg" alt="Ferramentas">Infraestrutura de redes</h3>
+                <p>Nossa equipe fornece suporte a instalação e configuração de todo o sistema de rede da sua empresa.
+                    Também efetuamos monitoramentos com o intuito de prevenir e corrigir possíveis problemas. Dessa
+                    forma, serviços como
+                    cabeamento estruturado e configuração de servidores podem ser realizados respeitando todos os
+                    padrões e recomendações.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-seguranca" class="modal-bg">
+        <div class="modal">
+            <button class="modal-btn"><img src="./image/modal-media/close.svg" alt="Fechar"></button>
+            <div>
+                <h3><img src="./image/modal-media/security.svg" alt="Ferramentas">Segurança da informação</h3>
+                <p>Dentre todos os serviços de informática necessários em uma organização, a segurança de dados é uma
+                    atividade essencial dentro
+                    de um ambiente corporativo. Por essa razão, a nossa empresa oferece o melhor suporte e estrutura de
+                    segurança de dados do mercado para
+                    garantir o fluxo seguro de sua rede.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-suporte" class="modal-bg">
+        <div class="modal">
+            <button class="modal-btn"><img src="./image/modal-media/close.svg" alt="Fechar"></button>
+            <div>
+                <h3><img src="./image/modal-media/phone.svg" alt="Ferramentas">Suporte remoto</h3>
+                <p>Visando um acesso eficaz e satisfatório aos nossos serviços, a nossa equipe conta com um suporte
+                    remoto integral para todos os
+                    serviços oferecidos. Dessa forma, os problemas ocorridos podem ser corrigidos de forma mais rápida e
+                    com total apoio de nossos técnicos que,
+                    além de trazer soluções, podem sanar todas suas dúvidas.</p>
+            </div>
+        </div>
+    </div>
+    <!--SOBRE A EMPRESA-->
+    <section class="info-about">
+
+        <img id="draw-animation" src="./image/drawings/draw02.svg" alt="Homem com celular">
+
+        <div class="about-text">
+            <div class="main-text">
+                <h3>SAIBA MAIS SOBRE NÓS</h3>
+                <p>Trabalhamos com profissionais qualificados para atender as mais diversas marcas de equipamentos no
+                    mercado.
+                    Tudo isso com rapidez e qualidade de atendimento, garantindo a sua satisfação.</p>
+            </div>
+
+            <div class="category-text">
+                <img src="./image/about-icons/medal.svg" alt="Medalha">
+                <div>
+                    <h4>QUALIDADE</h4>
+                    <p>Utiliza-mos rotineiramente uma moderna filosofia de trabalho,
+                        baseada na qualidade dos serviços.</p>
+                </div>
+            </div>
+
+            <div class="category-text">
+                <img src="./image/about-icons/diamond.svg" alt="Diamante">
+                <div>
+                    <h4>EXPERIÊNCIA</h4>
+                    <p>Experiência de sobra pode oferecer assistência
+                        técnica qualificada e com preços justos.</p>
+
+                </div>
+            </div>
+
+            <div class="category-text">
+                <img src="./image/about-icons/group.svg" alt="Pessoas">
+                <div>
+                    <h4>DIFERENCIAL</h4>
+                    <p>Trabalhamos com atendimentos em tempo recorde
+                        e suporte por acesso remoto express.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FORMULÁRIO DE ORÇAMENTO-->
+    <div class="form-container">
+        <div class="form-orcamento">
+            <div class="form-title">
+                <img src="./image/form-icons/money.svg" alt="Cifrão">
+                <h3>solicite seu orçamento</h3>
+            </div>
+            <form method="#" action="#">
+
+                <div class="left-column">
+
+                    <label class="label-style" for="name">Nome</label>
+                    <input class="input-style" name="name" type="text" placeholder="Seu nome">
+
+                    <label class="label-style" for="phone">Telefone</label>
+                    <input class="input-style" name="phone" type="text" placeholder="Seu telefone">
+
+                    <label class="label-style" for="address">Endereço</label>
+                    <input class="input-style" name="address" type="text" placeholder="Seu endereço">
+
+                    <label class="label-style" for="email">Email</label>
+                    <input class="input-style" name="email" type="text" placeholder="Seu email">
+                </div>
+
+                <div class="right-column">
+                    <div class="checkbox">
+
+                        <label class="label-style" for="Windows">Windows</label>
+                        <input name="Windows" type="checkbox" value="Windows">
+
+                        <label class="label-style" for="Linux">Linux</label>
+                        <input name="Linux" type="checkbox" value="Windows">
+
+                        <label class="label-style" for="Outros">Outros</label>
+                        <input name="Outros" type="checkbox" value="Windows">
+
+                    </div>
+
+                    <div class="group">
+                        <div class="input-group">
+                            <label class="label-style" for="Servidor">Servidores</label>
+                            <input class="input-style" name="Servidor" type="number" placeholder="Ex: 3">
+
+                            <label class="label-style" for="Desktop">Desktop</label>
+                            <input class="input-style" name="Desktop" type="number" placeholder="Ex: 5">
+
+                            <label class="label-style" for="Impressora">Impressora</label>
+                            <input class="input-style" name="Impressora" type="number" placeholder="Ex: 5">
+                        </div>
+
+                        <div class="input-group">
+                            <label class="label-style" for="Usuario">Usuários</label>
+                            <input class="input-style" name="Usuario" type="number" placeholder="Ex: 8">
+
+                            <label class="label-style" for="Notebook">Notebook</label>
+                            <input class="input-style" name="Notebook" type="number" placeholder="Ex: 6">
+
+                            <label class="label-style" for="Switch">Switch</label>
+                            <input class="input-style" name="Switch" type="number" placeholder="Ex: 6">
+                        </div>
+
+                    </div>
+                </div>
+                <input class="form-btn" type="submit" value="solicitar">
+            </form>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="info-text">
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/building.svg" alt="Construção">SOBRE NÓS</h3>
+                <p>Há mais de 10 anos atuando nos mais diversos segmentos e em clientes de todos
+                    os portes, a PLUG INFORMÁTICA criou uma oferta de serviços ampla e capaz de se
+                    adaptar as necessidade especificas de cada cliente ou segmento.</p>
+            </div>
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/location.svg" alt="Localização">LOCAL</h3>
+                <p>Recife/PE - Av. João de Barros, 1281 loja 02 - Empresarial Arcon CEP: 52021-180</p>
+            </div>
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/mail.svg" alt="Carta">EMAIL</h3>
+                <p>contato@pluginformatica.com.br</p>
+            </div>
+            <div class="info-container">
+                <h3><img src="./image/footer-icons/phone.svg" alt="Telefone">TELEFONE</h3>
+                <p>(81) 3244.3723 / 98709.4615</p>
+            </div>
+        </div>
+
+        <div class="social-network">
+            <img src="./image/drawings/draw05.svg" alt="Mulher ao celular">
+            <h3>INSCREVA-SE EM NOSSAS REDES SOCIAIS</h3>
+            <div class="social-icons">
+                <img src="./image/footer-icons/facebook.svg" alt="Facebook">
+                <img src="./image/footer-icons/instagram.svg" alt="Instagram">
+                <img src="./image/footer-icons/twitter.svg" alt="Twitter">
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

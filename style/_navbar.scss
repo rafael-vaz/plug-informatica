@@ -1,0 +1,71 @@
+@import "function", "variebles", "fonts";
+
+//BARRA DE NAVEGAÇÃO
+.navbar {
+  #logo img {
+    width: 40px;
+  }
+  height: 10vh;
+  width: 100%;
+  background-color: $darkBlue;
+  font-size: 0.9rem;
+  color: $white;
+  padding: 20px 40px;
+  position: fixed;
+  border-radius: 0px 0px 10px 10px;
+  @include flexBox(row, space-between, center);
+  z-index: 1000;
+
+  .nav-links {
+    @include flexBox(row, center, center);
+
+    a {
+      @include flexBox(row, center, center);
+      margin-right: 20px;
+      text-decoration: none;
+      font-family: $poppins;
+      color: $white;
+      transition: ease-in 0.2s;
+      &:hover {
+        color: $lightGrey;
+      }
+    }
+
+    img {
+      width: 25px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.btn-menu {
+  background: transparent;
+  outline: none;
+  border: none;
+  display: none;
+}
+
+.menu-list {
+  position: absolute;
+  list-style: none;
+  background-color: $darkBlue;
+  transform: translateX(-70px);
+  padding: 20px 25px;
+  line-height: 40px;
+  border-radius: 0px 0px 10px 10px;
+  display: none;
+
+  li {
+    @include flexBox(row, flex-start, center);
+    a {
+      transition: ease-in 0.2s;
+      &:hover {
+        color: $lightGrey;
+      }
+      img {
+        height: auto;
+        width: 20px;
+      }
+    }
+  }
+}
