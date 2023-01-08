@@ -15,4 +15,4 @@ Sistema institucional responsivo relacionado a uma empresa de Suporte em TI, cri
 
 ## Link do website 🌎
 
-https://rafael-vaz.github.io/plug-informatica/
+https://plug-informatica.netlify.app/
