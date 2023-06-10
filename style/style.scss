@@ -9,20 +9,28 @@
 
 //BANNER
 .banner {
-  height: 100vh;
-  width: 100%;
   background-image: url("../image/home-waves/wave01.svg");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0 15%;
-  overflow-x: hidden;
+  background-size: 100%;
+  overflow: hidden;
 
+ .banner-content{
+  height: calc(100vh - 60px);
+  max-height: 700px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto 0 auto;
+  padding: 20px 40px;
   @include flexBox(row, space-between, center);
+  gap: 20px;
   flex-wrap: wrap;
+  z-index: 10;
+ }
 
   .banner-text {
-    @include flexBox(column, center, center);
+      text-align: center;
+      text-align-last:center;
 
     p {
       font-family: $poppins;
@@ -41,14 +49,16 @@
 
   .draw {
     height: auto;
-    width: 40%;
+    max-width: 350px;
   }
 }
 //SERVIÇOS
 .services {
   height: auto;
   width: 100%;
-  padding: 10% 10%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
 
   h3 {
     font-family: $poppins;
@@ -56,7 +66,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 50px;
-    @include flexBox(row, flex-start, center);
+    @include flexBox(row, flex-start, center);    
 
     img {
       width: 30px;
@@ -66,10 +76,10 @@
 
   .services-list {
     @include flexBox(row, space-around, center);
+    gap: 30px;
     flex-wrap: wrap;
     .card {
       @include flexBox(column, space-around, center);
-      margin-bottom: 30px;
 
       p {
         font-family: $poppins;
@@ -82,7 +92,7 @@
         border-radius: 10px;
         margin-bottom: 15px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        transition: all ease-in 0.3s;
+        transition: 0.3s;
         &:hover {
           transform: scale(1.1);
           cursor: pointer;
@@ -138,15 +148,16 @@
   @include flexBox(row, center, center);
 
   .modal {
-    width: 90%;
+    max-width: 700px;
     height: auto;
+    padding: 40px;
     background-color: #ffff;
     border-radius: 10px;
-    padding: 10% 10%;
     background-image: url("../image/home-waves/wave04.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 10px;
 
     div {
       height: 100%;
@@ -204,17 +215,26 @@
   background-image: url("../image/home-waves/wave02.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+
+ .info-about-content{
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
   @include flexBox(row, space-between, center);
+  gap: 40px;
   flex-wrap: wrap;
-  padding: 10% 10%;
   overflow-x: hidden;
+ }
 
   img {
-    width: 30%;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .about-text {
-    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
     font-family: $poppins;
 
     .main-text {
@@ -259,40 +279,37 @@
   height: auto;
   background-image: url("../image/home-waves/wave03.svg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   overflow-x: hidden;
-  padding: 10% 0%;
   @include flexBox(row, center, center);
+  margin: auto;
+  padding: 40px;
 
   .form-orcamento {
     height: auto;
-    width: 50%;
+    max-width: 580px;
     border-radius: 10px;
-    background-color: $white;
+    background-color: #fff;
     border: 2px solid $lightBlue;
-    background-image: url("../image/form-icons/mail.svg");
-    background-repeat: no-repeat;
-    background-size: 10%;
-    background-position-y: 90%;
-    background-position-x: 10%;
-    padding: 5% 5%;
+    padding: 30px;
 
     form {
-      @include flexBox(row, space-evenly, flex-end);
-      flex-wrap: wrap;
-
+    .form-inputs{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      place-content: center;     
+    }
       input {
         margin-bottom: 20px;
       }
 
       .left-column {
-        @include flexBox(column, space-around, flex-start);
-        width: 50%;
+        @include flexBox(column, space-around, flex-start);  
       }
 
-      .right-column {
-        width: 50%;
+      .right-column {    
+        margin: auto 0;
         .checkbox {
           input {
             margin-right: 10px;
@@ -303,16 +320,28 @@
         }
         .group {
           @include flexBox(row, space-evenly, center);
+          gap: 30px;
           .input-group {
             @include flexBox(column, space-evenly, flex-start);
+            
             input {
-              width: 60%;
+              width: 100%;
             }
           }
         }
       }
-      .form-btn {
-        transform: translate(130%, 90%);
+      .buttons-container {
+        margin-top: 5px;
+       height: auto; 
+       width: 100%;
+       .form-btn{       
+        margin-bottom: 0
+       }
+       @include flexBox(row, space-between, center);
+       .mail-img{
+        height: auto;
+        width: 60px;
+       }
       }
     }
   }
@@ -321,14 +350,19 @@
 //DETALHE DOS SERVIÇOS
 
 .services-main {
+  margin-top: 60px;
   height: auto;
   width: 100%;
   background-image: url("../image/services-waves/wave01.svg");
-  background-position: bottom;
+  background-position: center;
+  background-position-y: 100px;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20vh 10% 10% 10%;
   overflow-x: hidden;
+.services-main-content{
+  margin: 20px auto;
+  padding: 40px;
+  max-width: 1200px;
   h3 {
     @include flexBox(row, flex-start, center);
     font-family: $poppins;
@@ -342,12 +376,14 @@
     }
   }
   .services-container {
-    @include flexBox(row, space-evenly, center);
-    flex-wrap: wrap;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto)); 
+    gap: 30px;
 
     div {
-      width: 40%;
-      margin-bottom: 30px;
+      max-width: 500px;
       line-height: 25px;
 
       h4 {
@@ -371,26 +407,34 @@
     }
   }
 }
+}
 
 //MAIS SOBRE OS SERVIÇOS
 
 .more-services {
-  padding: 10%;
   height: auto;
   width: 100%;
   background-image: url("../image/services-waves/wave02.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @include flexBox(row, space-evenly, center);
-  flex-wrap: wrap;
-  overflow-x: hidden;
+
+  .more-services-content{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 30px;
+   overflow-x: hidden;
+   max-width: 1200px;
+   margin: 40px auto;
+   padding: 40px;
 
   img {
-    width: 40%;
+    max-width: 350px;
   }
-  .more-container {
-    width: 60%;
+  
+  .more-container {  
     line-height: 25px;
     h3 {
       font-family: $poppins;
@@ -411,6 +455,7 @@
       font-weight: 400;
       font-size: 0.8rem;
       margin-bottom: 20px;
+      max-width: 60ch;
     }
 
     ul {
@@ -420,72 +465,73 @@
       font-size: 0.8rem;
       list-style-image: url("../image/service-icons/ellipse.svg");
       line-height: 40px;
-      margin-left: 15px;
-      margin-bottom: 40px;
+      margin-left: 15px;   
     }
+  }
   }
 }
 
 //CHAMADO
 
 .calls-content {
-  padding: 20vh 10% 10% 10%;
   width: 100%;
-  height: auto;
   background-image: url("../image/call-wave/wave01.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @include flexBox(row, space-between, center);
-  flex-wrap: wrap;
+  margin-top: 60px;
   overflow-x: hidden;
 
-  .calls-draw {
-    width: 40%;
-  }
+  .calls-wrapper{
+    @include flexBox(row, space-between, center);
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
 
-  .form-calls {
-    height: auto;
-    width: 50%;
-    background-color: $white;
-    border-radius: 10px;
-    border: 2px solid $lightBlue;
-    padding: 5% 0%;
-    margin-bottom: 40px;
+    .calls-draw {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  
+    .form-calls {
+      height: auto;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 2px solid $lightBlue;
+      padding: 30px;     
 
-    form {
-      .form-content {
-        @include flexBox(row, space-evenly, center);
-
-        input {
-          margin-bottom: 20px;
-          width: 100%;
+      form {
+        .form-content {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         place-content: center;
+         place-items: center;
+         gap: 30px;
+          input {
+            margin-bottom: 20px;
+            width: 100%;
+          }       
         }
-        .left-column {
+        .call-description {          
           @include flexBox(column, center, flex-start);
-          width: 40%;
+          textarea {
+            resize: none;
+            width: 100%;
+            height: 120px;
+            margin-bottom: 20px;
+            font-family: $poppins;
+            font-size: 0.8rem;
+            color: $black;
+            padding: 10px;
+          }
         }
-
-        .right-column {
-          width: 40%;
-          @include flexBox(column, center, flex-start);
+        .call-btn {
+          @include flexBox(row, center, center);
         }
-      }
-      .call-description {
-        margin: 0% 8%;
-        @include flexBox(column, center, flex-start);
-        textarea {
-          resize: none;
-          width: 100%;
-          height: 120px;
-          margin-bottom: 20px;
-          font-family: $poppins;
-          font-size: 0.8rem;
-          color: $black;
-        }
-      }
-      .call-btn {
-        @include flexBox(row, center, center);
       }
     }
   }
@@ -494,25 +540,31 @@
 //CONTATO
 
 .contact-container {
-  padding: 20vh 10% 10% 10%;
   height: auto;
   width: 100%;
   background-image: url("../image/contact-wave/wave01.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @include flexBox(row, center, center);
-  flex-wrap: wrap;
+  margin-top: 60px;
   overflow-x: hidden;
 
+  .contact-content{
+    @include flexBox(row, space-between, center);
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+  
   .form-contact {
-    width: 50%;
     height: auto;
-    background-color: $white;
+    width: 450px;
+    background-color: #fff;
     border-radius: 10px;
     border: 2px solid $lightBlue;
-    padding: 5%;
-    margin-bottom: 40px;
+    padding: 30px;
+    margin: 0 auto;
 
     form {
       @include flexBox(column, center, 0);
@@ -530,6 +582,7 @@
           margin-bottom: 20px;
           font-family: $poppins;
           font-size: 0.8rem;
+          padding: 10px;
         }
       }
 
@@ -540,16 +593,15 @@
   }
 
   .contact-details {
-    @include flexBox(column, center, center);
-    padding: 5%;
-    width: 50%;
+    @include flexBox(column, center, start);  
+    margin: 0 auto;
     height: auto;
     font-family: $poppins;
 
-    h3 {
+    h3 {     
       font-weight: 500;
       font-size: 0.9rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: $black;
       @include flexBox(row, center, center);
       img {
@@ -559,10 +611,11 @@
     }
 
     ul {
-      line-height: 40px;
+      line-height: 1.5;
       li {
         color: $lightBlack;
         font-size: 0.8rem;
+        margin-bottom: 30px;
         @include flexBox(row, 0, center);
         img {
           margin-right: 8px;
@@ -571,24 +624,16 @@
       }
     }
   }
+  }
 }
 
 //MEDIA QUERYS
 
-@media screen and (max-width: 1270px) {
-  .form-container {
-    .form-orcamento {
-      width: 80%;
-    }
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .info-about {
-    img {
-      width: 50%;
-    }
-  }
+@media screen and (min-width: 2000px) {
+ .form-container{
+  margin: 40px auto;
+  padding: 40px;
+ }
 }
 
 @media screen and (min-width: 800px) {
@@ -600,18 +645,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  .banner {
-    .banner-text {
-      transform: translateY(70px);
-      z-index: -100;
-    }
-    @include flexBox(column, space-evenly, center);
-
-    .draw {
-      width: 60%;
-    }
-  }
-
   .navbar {
     .nav-links {
       .hidden {
@@ -624,62 +657,86 @@
     }
   }
 
-  .contact-container {
-    .form-contact {
-      width: 100%;
+  .banner{
+    .banner-content{
+      height: auto;
+      max-height: auto;
+      @include flexBox(column, center, space-between);     
     }
-    .contact-details {
+   }
+
+  form{
+    .form-inputs{
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .banner{
+    .banner-content{
+      padding: 20px;
+    }
+  }
+  .services, .form-container{
+    padding: 20px;
+  }
+
+.info-about{
+  .info-about-content{
+    padding: 20px;
+  }
+}
+
+.services-main{
+  .services-main-content{
+    padding: 20px;
+  }
+}
+
+footer{
+  padding: 20px;
+  
+  .info-text{
+    width: 100% !important;
+  }
+
+  .social-network{
+    width: 100% !important;
+  }
+}
+
+.form-container{
+  padding: 20px;
+}
+
+.more-services{
+  img{
+    width: 80%;
+  }
+  .more-services-content{
+    padding: 20px;
+    .services-draw{
       width: 100%;
     }
   }
 }
 
+.calls-content{
+  .calls-wrapper{
+    padding: 20px;
+  }
+}
+.contact-container{
+  .contact-content{
+    padding: 20px;
+  }
+}
+}
+
 @media screen and (max-width: 760px) {
-  .form-container {
-    .form-orcamento {
-      background-position-y: 98%;
-
-      form {
-        @include flexBox(row, center, center);
-        .right-column {
-          width: 80%;
-          .group {
-            .input-group {
-              input {
-                width: 80%;
-              }
-            }
-          }
-        }
-
-        .left-column {
-          width: 80%;
-          input {
-            width: 100%;
-          }
-        }
-
-        .form-btn {
-          transform: translate(-10px, 20px);
-        }
-      }
-    }
-  }
-
+ 
   .services-main {
-    .services-container {
-      div {
-        width: 95%;
-      }
-    }
-  }
-
-  .more-services {
-    img {
-      width: 80%;
-    }
-    .more-container {
-      width: 90%;
+    .services-container {     
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto)) !important;
     }
   }
 
@@ -695,15 +752,10 @@
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 860px) {
   .info-about {
-    @include flexBox(column, center, space-between);
-    img {
-      width: 60%;
-      margin-bottom: 50px;
-    }
-    .about-text {
-      width: 80%;
+    img{
+      width: 100%;
     }
   }
 
@@ -717,6 +769,17 @@
     }
   }
 }
+
+@media (max-width: 500px){
+ .form-calls{
+  form {
+    .form-content {      
+      grid-template-columns: 1fr !important;
+      gap: 0 !important;
+    }
+  }
+ }
+  }
 
 @media screen and (max-width: 440px) {
   .banner {

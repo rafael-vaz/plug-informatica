@@ -2,19 +2,25 @@
 
 //BARRA DE NAVEGAÇÃO
 .navbar {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  background-color: $darkBlue;
+  z-index: 1000;
   #logo img {
     width: 40px;
   }
-  height: 10vh;
+ .nav-content{
   width: 100%;
-  background-color: $darkBlue;
   font-size: 0.9rem;
   color: $white;
-  padding: 20px 40px;
-  position: fixed;
-  border-radius: 0px 0px 10px 10px;
+  padding: 10px 40px;
   @include flexBox(row, space-between, center);
-  z-index: 1000;
+  max-width: 1200px;
+  margin: 0 auto;
+ }
 
   .nav-links {
     @include flexBox(row, center, center);
@@ -25,7 +31,7 @@
       text-decoration: none;
       font-family: $poppins;
       color: $white;
-      transition: ease-in 0.2s;
+      transition: 0.2s;
       &:hover {
         color: $lightGrey;
       }

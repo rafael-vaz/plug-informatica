@@ -14,6 +14,7 @@
   border-radius: 10px;
   border: solid 2px $lightBlue;
   outline: none;
+  width: 100%;
 }
 
 .form-btn {
@@ -25,7 +26,7 @@
   background: linear-gradient(180deg, #00e5ff 0%, #00b0ff 50.52%, #2979ff 100%);
   border: none;
   cursor: pointer;
-  transition: all ease-in 0.3s;
+  transition: 0.2s;
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }

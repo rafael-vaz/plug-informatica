@@ -18,73 +18,65 @@
 
     <!--BARRA DE NAVEGAÇÃO-->
     <nav class="navbar">
-        <a href="./index.html" id="logo"><img src="./image/logo/logo.svg" alt="Logo"></a>
-        <div class="nav-links">
-            <a class="hidden" href="./index.html"><img src="image/navbar-icons/home.svg">home</a>
-            <a class="hidden" href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a>
-            <a class="hidden" href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a>
-            <a class="hidden" href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a>
-            <div class="menu-hamburger">
-                <button class="btn-menu"><img src="./image/navbar-icons/menu.svg" alt="Menu"></button>
-                <ul class="menu-list">
-                    <li><a href="./index.html"><img src="image/navbar-icons/home.svg">home</a></li>
-                    <li><a href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a></li>
-                    <li><a href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a></li>
-                    <li><a href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a></li>
-                </ul>
+        <div class="nav-content">
+            <a href="./index.html" id="logo"><img src="./image/logo/logo.svg" alt="Logo"></a>
+            <div class="nav-links">
+                <a class="hidden" href="./index.html"><img src="image/navbar-icons/home.svg">home</a>
+                <a class="hidden" href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a>
+                <a class="hidden" href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a>
+                <a class="hidden" href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a>
+                <div class="menu-hamburger">
+                    <button class="btn-menu"><img src="./image/navbar-icons/menu.svg" alt="Menu"></button>
+                    <ul class="menu-list">
+                        <li><a href="./index.html"><img src="image/navbar-icons/home.svg">home</a></li>
+                        <li><a href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a></li>
+                        <li><a href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a></li>
+                        <li><a href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
+
     <!--FORMULÁRIO DE CHAMADO-->
     <div class="calls-content">
-        <div class="form-calls">
-            <div class="form-title">
-                <img src="./image/form-icons/remote.svg" alt="Remoto">
-                <h3>realize seu chamado</h3>
+        <div class="calls-wrapper">
+            <div class="form-calls">
+                <div class="form-title">
+                    <img src="./image/form-icons/remote.svg" alt="Remoto">
+                    <h3>realize seu chamado</h3>
+                </div>
+                <form action="#" method="#">
+                    <div class="form-content">
+                        <div class="left-column">
+                            <label class="label-style" for="nome">Nome</label>
+                            <input class="input-style" name="nome" type="text" placeholder="Seu nome">
+                            <label class="label-style" for="cpf">CPF</label>
+                            <input class="input-style" name="cpf" type="text" placeholder="Seu CPF">
+                            <label class="label-style" for="telefone">Telefone</label>
+                            <input class="input-style" name="telefone" type="text" placeholder="Seu telefone">
+                        </div>
+                        <div class="right-column">
+                            <label class="label-style" for="email">Email</label>
+                            <input class="input-style" name="email" type="text" placeholder="Seu email">
+                            <label class="label-style" for="data">Data</label>
+                            <input class="input-style" name="data" type="text" placeholder="dd/mm/aaaa">
+                            <label class="label-style" for="horario">Horário</label>
+                            <input class="input-style" name="horario" type="text" placeholder="00:00">
+                        </div>
+                    </div>
+                    <div class="call-description">
+                        <label class="label-style" for="descricao">Descrição do problema</label>
+                        <textarea class="input-style" name="descricao"
+                            placeholder="Descreva o seu problema aqui"></textarea>
+                    </div>
+                    <div class="call-btn">
+                        <input class="form-btn" type="submit" value="solicitar">
+                    </div>
+                </form>
             </div>
-            <form action="#" method="#">
-                <div class="form-content">
-                    <div class="left-column">
-
-                        <label class="label-style" for="nome">Nome</label>
-                        <input class="input-style" name="nome" type="text" placeholder="Seu nome">
-
-                        <label class="label-style" for="cpf">CPF</label>
-                        <input class="input-style" name="cpf" type="text" placeholder="Seu CPF">
-
-                        <label class="label-style" for="telefone">Telefone</label>
-                        <input class="input-style" name="telefone" type="text" placeholder="Seu telefone">
-
-                    </div>
-
-                    <div class="right-column">
-
-                        <label class="label-style" for="email">Email</label>
-                        <input class="input-style" name="email" type="text" placeholder="Seu email">
-
-                        <label class="label-style" for="data">Data</label>
-                        <input class="input-style" name="data" type="text" placeholder="dd/mm/aaaa">
-
-                        <label class="label-style" for="horario">Horário</label>
-                        <input class="input-style" name="horario" type="text" placeholder="00:00">
-
-                    </div>
-                </div>
-
-                <div class="call-description">
-
-                    <label class="label-style" for="descricao">Descrição do problema</label>
-                    <textarea class="input-style" name="descricao"
-                        placeholder="Descreva o seu problema aqui"></textarea>
-
-
-                </div>
-                <div class="call-btn">
-                    <input class="form-btn" type="submit" value="solicitar">
-                </div>
-            </form>
+            <img class="calls-draw" src="./image/drawings/draw01.svg" alt="Homem com computador">
         </div>
-        <img class="calls-draw" src="./image/drawings/draw01.svg" alt="Homem com computador">
     </div>
 
     <!--FOOTER-->

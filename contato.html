@@ -17,20 +17,22 @@
 <body>
     <!--BARRA DE NAVEGAÇÃO-->
     <nav class="navbar">
-        <a href="./index.html" id="logo"><img src="./image/logo/logo.svg" alt="Logo"></a>
-        <div class="nav-links">
-            <a class="hidden" href="./index.html"><img src="image/navbar-icons/home.svg">home</a>
-            <a class="hidden" href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a>
-            <a class="hidden" href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a>
-            <a class="hidden" href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a>
-            <div class="menu-hamburger">
-                <button class="btn-menu"><img src="./image/navbar-icons/menu.svg" alt="Menu"></button>
-                <ul class="menu-list">
-                    <li><a href="./index.html"><img src="image/navbar-icons/home.svg">home</a></li>
-                    <li><a href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a></li>
-                    <li><a href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a></li>
-                    <li><a href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a></li>
-                </ul>
+        <div class="nav-content">
+            <a href="./index.html" id="logo"><img src="./image/logo/logo.svg" alt="Logo"></a>
+            <div class="nav-links">
+                <a class="hidden" href="./index.html"><img src="image/navbar-icons/home.svg">home</a>
+                <a class="hidden" href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a>
+                <a class="hidden" href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a>
+                <a class="hidden" href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a>
+                <div class="menu-hamburger">
+                    <button class="btn-menu"><img src="./image/navbar-icons/menu.svg" alt="Menu"></button>
+                    <ul class="menu-list">
+                        <li><a href="./index.html"><img src="image/navbar-icons/home.svg">home</a></li>
+                        <li><a href="./servicos.html"><img src="image/navbar-icons/settings.svg">serviços</a></li>
+                        <li><a href="./chamado.html"><img src="image/navbar-icons/swap_calls.svg">chamado</a></li>
+                        <li><a href="./contato.html"><img src="image/navbar-icons/account_box.svg">contato</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -38,40 +40,42 @@
     <!--FORMULÁRIO DE CONTATO-->
 
     <div class="contact-container">
-        <div class="form-contact">
-            <div class="form-title">
-                <img src="./image/form-icons/question.svg" alt="Interrogação">
-                <h3>envie sua dúvida</h3>
+        <div class="contact-content">
+            <div class="form-contact">
+                <div class="form-title">
+                    <img src="./image/form-icons/question.svg" alt="Interrogação">
+                    <h3>envie sua dúvida</h3>
+                </div>
+                <form action="#" method="#">
+
+                    <div class="form-inputs">
+                        <label class="label-style" for="nome">Nome</label>
+                        <input class="input-style" name="nome" type="text" placeholder="Seu nome">
+
+                        <label class="label-style" for="email">Email</label>
+                        <input class="input-style" name="email" type="text" placeholder="Seu email">
+
+                        <label class="label-style" for="assunto">Assunto</label>
+                        <input class="input-style" name="assunto" type="text" placeholder="Tipo de assunto">
+
+                        <label class="label-style" for="mensagem">Mensagem</label>
+                        <textarea class="input-style" name="mensagem" placeholder="Digite sua dúvida aqui"></textarea>
+                    </div>
+                    <div class="contact-btn">
+                        <input class="form-btn" type="submit" value="enviar">
+                    </div>
+                </form>
             </div>
-            <form action="#" method="#">
 
-                <div class="form-inputs">
-                    <label class="label-style" for="nome">Nome</label>
-                    <input class="input-style" name="nome" type="text" placeholder="Seu nome">
-
-                    <label class="label-style" for="email">Email</label>
-                    <input class="input-style" name="email" type="text" placeholder="Seu email">
-
-                    <label class="label-style" for="assunto">Assunto</label>
-                    <input class="input-style" name="assunto" type="text" placeholder="Tipo de assunto">
-
-                    <label class="label-style" for="mensagem">Mensagem</label>
-                    <textarea class="input-style" name="mensagem" placeholder="Digite sua dúvida aqui"></textarea>
-                </div>
-                <div class="contact-btn">
-                    <input class="form-btn" type="submit" value="enviar">
-                </div>
-            </form>
-        </div>
-
-        <div class="contact-details">
-            <h3><img src="./image/contact-icons/contact.svg" alt="Contato">DETALHES DO CONTATO</h3>
-            <ul>
-                <li><img src="./image/contact-icons/house.svg" alt="Casa">Recife/PE - Av. João de Barros, 1281</li>
-                <li><img src="./image/contact-icons/phone.svg" alt="Telefone">(81) 3244.3723 / 98709.4615</li>
-                <li><img src="./image/contact-icons/email.svg" alt="Email">contato@pluginformatica.com.br</li>
-                <li><img src="./image/contact-icons/network.svg" alt="Network">www.pluginformatica.com.br</li>
-            </ul>
+            <div class="contact-details">
+                <h3><img src="./image/contact-icons/contact.svg" alt="Contato">DETALHES DO CONTATO</h3>
+                <ul>
+                    <li><img src="./image/contact-icons/house.svg" alt="Casa">Recife/PE - Av. João de Barros, 1281</li>
+                    <li><img src="./image/contact-icons/phone.svg" alt="Telefone">(81) 3244.3723 / 98709.4615</li>
+                    <li><img src="./image/contact-icons/email.svg" alt="Email">contato@pluginformatica.com.br</li>
+                    <li><img src="./image/contact-icons/network.svg" alt="Network">www.pluginformatica.com.br</li>
+                </ul>
+            </div>
         </div>
     </div>
 
