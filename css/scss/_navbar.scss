@@ -1,0 +1,106 @@
+//? barra de navegacao
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  background-color: $pi-c8;
+  z-index: 10;
+  #logo img {
+    width: 40px;
+  }
+  .nav-content {
+    position: relative;
+    width: 100%;
+    font-size: 0.9rem;
+    color: $pi-c2;
+    padding: 10px 40px;
+    @include flexbox(row, space-between, center);
+    max-width: $wrapper;
+    margin: 0 auto;
+  }
+  .nav-links {
+    @include flexbox(row, center, center);
+    list-style: none;
+    gap: 30px;
+    li + li::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 2px;
+      top: 0;
+      left: -17px;
+      background-color: $pi-c9;
+    }
+    li {
+      position: relative;
+      a {
+        @include flexbox(row, center, center);
+        text-decoration: none;
+        font-family: $title-font;
+        color: $pi-c2;
+        transition: 0.2s;
+        &:hover {
+          filter: brightness(0.9);
+        }
+        img {
+          width: 25px;
+          margin-right: 5px;
+        }
+      }
+      .active {
+        color: #2de3ff;
+        img {
+          filter: brightness(0) saturate(100%) invert(79%) sepia(43%)
+            saturate(2423%) hue-rotate(151deg) brightness(101%) contrast(101%);
+        }
+      }
+    }
+  }
+  @include device(m) {
+    .nav-links {
+      @include flexbox(column, center, center);
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 50px;
+      gap: 0;
+      background-color: $pi-c8;
+      border-radius: 0px 0px 10px 10px;
+      overflow: hidden;
+      li {
+        ::after {
+          display: none;
+        }
+        @include flexbox(row, flex-start, center);
+        width: 100%;
+        padding: 16px 20px;
+        a {
+          transition: ease-in 0.2s;
+          img {
+            height: auto;
+            width: 20px;
+          }
+        }
+      }
+      li + li {
+        border-top: 1px solid $pi-c9;
+      }
+    }
+    .btn-menu {
+      display: block;
+    }
+  }
+}
+
+.btn-menu {
+  display: none;
+  background: transparent;
+  outline: none;
+  border: none;
+  img {
+    width: 30px;
+  }
+}

@@ -1,0 +1,81 @@
+//? footer
+footer {
+  @include flexbox(row, space-evenly, center);
+  gap: 40px;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  max-width: $wrapper;
+  margin: 20px auto;
+  padding: 40px;
+
+  .info-text {
+    max-width: 500px;
+    margin: 0 auto;
+
+    div {
+      line-height: 25px;
+      margin-bottom: 20px;
+      h3 {
+        font-family: $title-font;
+        color: $pi-c5;
+        font-size: 0.9rem;
+        font-weight: 500;
+        @include flexbox(row, flex-start, center);
+        img {
+          width: 30px;
+          margin-right: 8px;
+        }
+      }
+      p {
+        font-family: $title-font;
+        color: $pi-c4;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .social-network {
+    @include flexbox(column, space-around, center);
+    margin: 0 auto;
+    img {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      line-height: 25px;
+      font-family: $title-font;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: $pi-c5;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .social-icons {
+      @include flexbox(row, center, center);
+      gap: 20px;
+      img {
+        height: auto;
+        width: 30px;
+      }
+    }
+  }
+
+  @include device(m) {
+    padding: 20px;
+    .info-text {
+      width: 100%;
+    }
+    .social-network {
+      width: 100%;
+    }
+  }
+
+  @include device(s) {
+    .social-network {
+      img {
+        width: 80%;
+      }
+    }
+  }
+}

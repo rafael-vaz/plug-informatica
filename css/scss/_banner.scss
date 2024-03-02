@@ -1,0 +1,76 @@
+//? banner
+.banner {
+  background-image: url("../img/home-waves/wave01.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+
+  .banner-content {
+    height: calc(100vh - 60px);
+    max-height: 700px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto 0 auto;
+    padding: 20px 40px;
+    @include flexbox(row, space-between, center);
+    gap: 30px;
+    flex-wrap: wrap;
+    z-index: 10;
+  }
+
+  .banner-text {
+    text-align: center;
+    text-align-last: center;
+
+    p {
+      font-family: $title-font;
+      font-weight: 400;
+      color: $pi-c5;
+      font-size: 2.2rem;
+    }
+
+    h3 {
+      font-family: $title-font;
+      font-weight: 500;
+      color: $pi-c8;
+      font-size: 2.8rem;
+    }
+  }
+
+  .draw {
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  @include device(m) {
+    .banner-content {
+      height: auto;
+      padding: 40px 20px;
+      @include flexbox(column, center, center);
+    }
+    .banner-text {
+      p {
+        font-size: 1.8rem;
+      }
+      h3 {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  @include device(s) {
+    .banner-text {
+      p {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
+    .draw {
+      width: 80%;
+    }
+  }
+}

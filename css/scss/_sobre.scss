@@ -1,0 +1,75 @@
+//? sobre a empresa
+.info-about {
+  min-height: auto;
+  width: 100%;
+  background-image: url("../img/home-waves/wave02.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  .info-about-content {
+    max-width: $wrapper;
+    margin: 20px auto;
+    padding: 40px;
+    @include flexbox(row, space-between, center);
+    gap: 40px;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    @include device(m) {
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+  }
+
+  img {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: $title-font;
+
+    .main-text {
+      h3 {
+        color: $pi-c5;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      p {
+        color: $pi-c4;
+        font-size: 0.8rem;
+      }
+      line-height: 25px;
+      margin-bottom: 15px;
+    }
+
+    .category-text {
+      @include flexbox(row, center, center);
+      img {
+        width: 30px;
+        margin-right: 10px;
+      }
+
+      div {
+        line-height: 25px;
+        h4 {
+          color: $pi-c5;
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+        p {
+          color: $pi-c4;
+          font-size: 0.8rem;
+        }
+      }
+      margin-bottom: 15px;
+    }
+  }
+  @include device(m) {
+    img {
+      width: 80%;
+    }
+  }
+}

@@ -11,7 +11,7 @@ Sistema institucional responsivo relacionado a uma empresa de Suporte em TI, cri
 
 ## Preview 📷
 
-<img src="https://github.com/rafael-vaz/plug-informatica-website/blob/main/image/plug-informatica-preview.png?raw=true">
+<img src="https://github.com/rafael-vaz/plug-informatica-website/blob/main/image/preview/page-preview.png?raw=true">
 
 ## Link do website 🌎
 

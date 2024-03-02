@@ -1,0 +1,33 @@
+//? chamados
+.calls-content {
+  width: 100%;
+  background-image: url("../img/call-wave/wave01.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 60px;
+  overflow-x: hidden;
+
+  .calls-wrapper {
+    @include flexbox(row, space-between, center);
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: $wrapper;
+    margin: 20px auto;
+    padding: 40px;
+
+    .calls-draw {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+  @include device(m) {
+    .calls-wrapper {
+      padding: 20px;
+    }
+    .calls-draw {
+      margin: auto;
+      width: 80%;
+    }
+  }
+}

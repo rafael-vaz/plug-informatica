@@ -1,0 +1,43 @@
+//? mixins
+// flexbox
+@mixin flexbox($direction, $justifyContent, $alignItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+// grid
+@mixin grid($cols, $pContent, $pItems) {
+  display: grid;
+  @if ($cols) {
+    grid-template-columns: repeat($cols, 1fr);
+  }
+  @if ($pContent) {
+    place-content: $pContent;
+  }
+  @if ($pItems) {
+    place-items: $pItems;
+  }
+}
+
+// media queries
+@mixin device($size) {
+  @if ($size == x) {
+    @media (min-width: $x-device) {
+      @content;
+    }
+  } @else if ($size == l) {
+    @media (min-width: $l-device) {
+      @content;
+    }
+  } @else if ($size == m) {
+    @media (max-width: $m-device) {
+      @content;
+    }
+  } @else if($size == s) {
+    @media (max-width: $s-device) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,217 @@
+//? formulario
+// fomatacoes gerais
+.label-style {
+  font-family: $title-font;
+  font-size: 0.8rem;
+  color: $pi-c5;
+  margin-bottom: 5px;
+}
+.input-style {
+  background: transparent;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: solid 2px $pi-c7;
+  outline: none;
+  width: 100%;
+}
+
+.form-btn {
+  font-family: $title-font;
+  font-size: 0.9rem;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #00e5ff 0%, #00b0ff 50.52%, #2979ff 100%);
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.form-title {
+  margin-bottom: 20px;
+
+  @include flexbox(row, center, center);
+  img {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  h3 {
+    font-family: $title-font;
+    color: $pi-c5;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.form-container {
+  height: auto;
+  background-image: url("../img/home-waves/wave03.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  @include flexbox(row, center, center);
+  margin: auto;
+  padding: 40px;
+
+  @include device(x) {
+    margin: 40px auto;
+    padding: 40px;
+  }
+  @include device(m) {
+    padding: 20px;
+  }
+}
+
+//formulario de orcamento
+.form-orcamento {
+  height: auto;
+  max-width: 580px;
+  border-radius: 10px;
+  background-color: $pi-c1;
+  border: 2px solid $pi-c7;
+  padding: 30px;
+
+  form {
+    .form-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      place-content: center;
+      @include device(m) {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+    input {
+      margin-bottom: 20px;
+    }
+
+    .left-column {
+      @include flexbox(column, space-around, flex-start);
+    }
+
+    .right-column {
+      margin: auto 0;
+      .checkbox {
+        input {
+          margin-right: 10px;
+        }
+        label {
+          margin-right: 5px;
+        }
+      }
+      .group {
+        @include flexbox(row, space-evenly, center);
+        gap: 30px;
+        .input-group {
+          @include flexbox(column, space-evenly, flex-start);
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .buttons-container {
+      margin-top: 5px;
+      height: auto;
+      width: 100%;
+      .form-btn {
+        margin-bottom: 0;
+      }
+      @include flexbox(row, space-between, center);
+      .mail-img {
+        height: auto;
+        width: 60px;
+      }
+    }
+  }
+}
+
+// formulario de chamados
+.form-calls {
+  height: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: $pi-c1;
+  border-radius: 10px;
+  border: 2px solid $pi-c7;
+  padding: 30px;
+
+  form {
+    .form-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-content: center;
+      place-items: center;
+      gap: 30px;
+      input {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+    .call-description {
+      @include flexbox(column, center, flex-start);
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 120px;
+        margin-bottom: 20px;
+        font-family: $title-font;
+        font-size: 0.8rem;
+        color: $pi-c5;
+        padding: 10px;
+      }
+    }
+    .call-btn {
+      @include flexbox(row, center, center);
+    }
+    @include device(s) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+  @include device(m) {
+    width: 100%;
+  }
+}
+
+// formulario de contato
+.form-contact {
+  height: auto;
+  width: 450px;
+  background-color: $pi-c1;
+  border-radius: 10px;
+  border: 2px solid $pi-c7;
+  padding: 30px;
+  margin: 0 auto;
+
+  form {
+    @include flexbox(column, center, 0);
+    .form-inputs {
+      @include flexbox(column, center, flex-start);
+      input {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 120px;
+        margin-bottom: 20px;
+        font-family: $title-font;
+        font-size: 0.8rem;
+        padding: 10px;
+      }
+    }
+
+    .contact-btn {
+      @include flexbox(row, center, center);
+    }
+  }
+}
