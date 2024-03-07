@@ -13,7 +13,7 @@
   .nav-content {
     position: relative;
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: $pi-c2;
     padding: 10px 40px;
     @include flexbox(row, space-between, center);

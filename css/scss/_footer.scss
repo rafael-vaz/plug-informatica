@@ -13,12 +13,12 @@ footer {
     margin: 0 auto;
 
     div {
-      line-height: 25px;
+      line-height: 1.8;
       margin-bottom: 20px;
       h3 {
         font-family: $title-font;
         color: $pi-c5;
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: 500;
         @include flexbox(row, flex-start, center);
         img {
@@ -27,9 +27,9 @@ footer {
         }
       }
       p {
-        font-family: $title-font;
+        font-family: $content-font;
         color: $pi-c4;
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
     }
   }
@@ -43,10 +43,10 @@ footer {
       margin-bottom: 20px;
     }
     h3 {
-      line-height: 25px;
+      line-height: 1.8;
       font-family: $title-font;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: $pi-c5;
       margin-bottom: 20px;
       text-align: center;
@@ -55,8 +55,13 @@ footer {
       @include flexbox(row, center, center);
       gap: 20px;
       img {
-        height: auto;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        &:hover {
+          filter: brightness(0) saturate(100%) invert(43%) sepia(31%)
+            saturate(6976%) hue-rotate(207deg) brightness(100%) contrast(106%);
+        }
       }
     }
   }

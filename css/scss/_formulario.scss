@@ -1,23 +1,26 @@
 //? formulario
 // fomatacoes gerais
 .label-style {
-  font-family: $title-font;
-  font-size: 0.8rem;
+  display: inline-block;
+  font-family: $content-font;
+  font-size: 1rem;
   color: $pi-c5;
   margin-bottom: 5px;
 }
 .input-style {
+  font-family: $content-font;
   background: transparent;
   padding: 5px 10px;
   border-radius: 10px;
   border: solid 2px $pi-c7;
+  color: $pi-c6;
   outline: none;
   width: 100%;
 }
 
 .form-btn {
   font-family: $title-font;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: white;
   padding: 10px 30px;
   border-radius: 10px;
@@ -32,24 +35,24 @@
 
 .form-title {
   margin-bottom: 20px;
-
   @include flexbox(row, center, center);
   img {
-    width: 30px;
+    height: 34px;
+    width: 34px;
     margin-right: 10px;
   }
 
   h3 {
     font-family: $title-font;
     color: $pi-c5;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
   }
 }
 
 .form-container {
   height: auto;
-  background-image: url("../img/home-waves/wave03.svg");
+  background-image: url("../../img/home-waves/wave03.svg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -69,7 +72,7 @@
 //formulario de orcamento
 .form-orcamento {
   height: auto;
-  max-width: 580px;
+  max-width: 640px;
   border-radius: 10px;
   background-color: $pi-c1;
   border: 2px solid $pi-c7;
@@ -89,6 +92,9 @@
     input {
       margin-bottom: 20px;
     }
+    label {
+      margin-right: 2px;
+    }
 
     .left-column {
       @include flexbox(column, space-around, flex-start);
@@ -99,9 +105,6 @@
       .checkbox {
         input {
           margin-right: 10px;
-        }
-        label {
-          margin-right: 5px;
         }
       }
       .group {
@@ -135,7 +138,7 @@
 // formulario de chamados
 .form-calls {
   height: auto;
-  max-width: 500px;
+  max-width: 580px;
   margin: 0 auto;
   background-color: $pi-c1;
   border-radius: 10px;
@@ -161,8 +164,6 @@
         width: 100%;
         height: 120px;
         margin-bottom: 20px;
-        font-family: $title-font;
-        font-size: 0.8rem;
         color: $pi-c5;
         padding: 10px;
       }
@@ -183,7 +184,7 @@
 // formulario de contato
 .form-contact {
   height: auto;
-  width: 450px;
+  width: 580px;
   background-color: $pi-c1;
   border-radius: 10px;
   border: 2px solid $pi-c7;
@@ -204,8 +205,6 @@
         width: 100%;
         height: 120px;
         margin-bottom: 20px;
-        font-family: $title-font;
-        font-size: 0.8rem;
         padding: 10px;
       }
     }

@@ -9,7 +9,7 @@
   h3 {
     font-family: $title-font;
     color: $pi-c5;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 500;
     margin-bottom: 50px;
     @include flexbox(row, flex-start, center);
@@ -30,7 +30,7 @@
       p {
         font-family: $title-font;
         color: $pi-c5;
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       .card-content {
         width: 200px;
@@ -49,7 +49,7 @@
 }
 
 #card-manutencao {
-  background-image: url("../img/cards-drawings/draw01.svg");
+  background-image: url("../../img/cards-drawings/draw01.svg");
   background-color: $pi-c2;
   background-size: contain;
   background-position: bottom;
@@ -57,7 +57,7 @@
 }
 
 #card-infraestrutura {
-  background-image: url("../img/cards-drawings/draw02.svg");
+  background-image: url("../../img/cards-drawings/draw02.svg");
   background-color: $pi-c2;
   background-size: contain;
   background-position: bottom;
@@ -65,7 +65,7 @@
 }
 
 #card-seguranca {
-  background-image: url("../img/cards-drawings/draw03.svg");
+  background-image: url("../../img/cards-drawings/draw03.svg");
   background-color: $pi-c2;
   background-size: contain;
   background-position: bottom;
@@ -73,7 +73,7 @@
 }
 
 #card-suporte {
-  background-image: url("../img/cards-drawings/draw04.svg");
+  background-image: url("../../img/cards-drawings/draw04.svg");
   background-color: $pi-c2;
   background-size: contain;
   background-position: bottom;
@@ -85,7 +85,7 @@
   margin-top: 60px;
   height: auto;
   width: 100%;
-  background-image: url("../img/services-waves/wave01.svg");
+  background-image: url("../../img/services-waves/wave01.svg");
   background-position: center;
   background-position-y: 100px;
   background-repeat: no-repeat;
@@ -100,7 +100,7 @@
       font-family: $title-font;
       color: $pi-c5;
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-bottom: 50px;
       img {
         width: 30px;
@@ -108,30 +108,31 @@
       }
     }
     .services-container {
-      @include grid(2, center, center);
-      gap: 30px;
+      @include grid(2, center, top);
+      gap: 40px;
 
       div {
         max-width: 500px;
-        line-height: 25px;
+        line-height: 1.8;
 
         h4 {
           font-family: $title-font;
           color: $pi-c5;
           font-weight: 500;
-          font-size: 0.9rem;
-          margin-bottom: 5px;
+          font-size: 1.2rem;
+          margin-bottom: 10px;
           @include flexbox(row, flex-start, center);
           img {
-            width: 20px;
+            height: 30px;
+            width: 30px;
             margin-right: 10px;
           }
         }
         p {
-          font-family: $title-font;
+          font-family: $content-font;
           color: $pi-c4;
           font-weight: 400;
-          font-size: 0.8rem;
+          font-size: 1rem;
         }
       }
       @include device(m) {
@@ -145,7 +146,7 @@
 .more-services {
   height: auto;
   width: 100%;
-  background-image: url("../img/services-waves/wave02.svg");
+  background-image: url("../../img/services-waves/wave02.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -166,37 +167,42 @@
     }
 
     .more-container {
-      line-height: 25px;
+      line-height: 1.8;
       h3 {
         font-family: $title-font;
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         color: $pi-c5;
         margin-bottom: 20px;
         @include flexbox(row, flex-start, center);
 
         img {
-          width: 20px;
+          height: 30px;
+          width: 30px;
           margin-right: 10px;
         }
       }
       p {
-        font-family: $title-font;
+        font-family: $content-font;
         color: $pi-c4;
         font-weight: 400;
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-bottom: 20px;
         max-width: 60ch;
       }
 
       ul {
-        font-family: $title-font;
+        font-family: $content-font;
         color: $pi-c5;
         font-weight: 400;
-        font-size: 0.8rem;
-        list-style-image: url("../img/service-icons/ellipse.svg");
-        line-height: 40px;
+        font-size: 1rem;
+        list-style-image: url("../../img/service-icons/ellipse.svg");
+        margin: 20px 0;
         margin-left: 15px;
+        line-height: 1.8;
+        li {
+          margin-bottom: 16px;
+        }
       }
     }
   }

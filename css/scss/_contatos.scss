@@ -2,7 +2,7 @@
 .contact-container {
   height: auto;
   width: 100%;
-  background-image: url("../img/contact-wave/wave01.svg");
+  background-image: url("../../img/contact-wave/wave01.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,26 +25,28 @@
 
       h3 {
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         margin-bottom: 30px;
         color: $pi-c5;
         @include flexbox(row, center, center);
         img {
           margin-right: 8px;
-          width: 30px;
+          height: 34px;
+          width: 34px;
         }
       }
 
       ul {
-        line-height: 1.5;
+        line-height: 1.8;
         li {
           color: $pi-c4;
-          font-size: 0.8rem;
-          margin-bottom: 30px;
+          font-size: 1rem;
+          margin-bottom: 16px;
           @include flexbox(row, 0, center);
           img {
             margin-right: 8px;
-            width: 20px;
+            height: 22px;
+            width: 22px;
           }
         }
       }
