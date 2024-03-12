@@ -1,4 +1,4 @@
-## Plug Informática - Website <img width="30px" src="./img/logo/logo.svg">
+## Plug Informática <img width="30px" src="./img/logo/logo.svg">
 
 Sistema institucional responsivo relacionado a uma empresa de suporte em TI, que atua com uma ampla gama de serviços.
 
