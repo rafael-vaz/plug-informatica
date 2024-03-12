@@ -1,6 +1,6 @@
 ## Plug Informática - Website <img width="30px" src="./img/logo/logo.svg">
 
-Sistema institucional responsivo relacionado a uma empresa de Suporte em TI, criado com as tecnologias HTML, CSS, Sass, JavaScript e jQuery.
+Sistema institucional responsivo relacionado a uma empresa de suporte em TI, que atua com uma ampla gama de serviços.
 
 ## Tecnologias utilizadas 💻
 <div style="display: flex; gap: 4px; flex-wrap: wrap">
