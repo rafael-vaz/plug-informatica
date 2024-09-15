@@ -9,13 +9,16 @@
 }
 .input-style {
   font-family: $content-font;
-  background: transparent;
+  background-color: #f7f7f7;
   padding: 5px 10px;
   border-radius: 10px;
   border: solid 2px $pi-c7;
   color: $pi-c6;
   outline: none;
   width: 100%;
+  &:focus {
+    background-color: #e8f8ff;
+  }
 }
 
 .form-btn {

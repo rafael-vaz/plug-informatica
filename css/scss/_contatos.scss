@@ -18,7 +18,7 @@
     padding: 40px;
 
     .contact-details {
-      @include flexbox(column, center, start);
+      @include flexbox(column, center, flex-start);
       margin: 0 auto;
       height: auto;
       font-family: $title-font;
